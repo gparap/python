@@ -69,13 +69,13 @@ while True:
             if event.key == pygame.K_DOWN:
                 image_cat_positionY += 10
 
-    #update the "..." image position X
+    #update image position
     image_cat_positionX += 1
     if image_cat_positionX == 300:
         image_cat_positionX = 0
 
     #blit the image to the screen surface
-    surface_SCREEN.blit(image_cat, (image_cat_positionX,image_cat_positionY))
+    surface_SCREEN.blit(image_cat, (image_cat_positionX, image_cat_positionY))
 
     #display the screen surface
     pygame.display.update()
