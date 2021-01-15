@@ -1,9 +1,4 @@
 #gparap 10-11-2016
-#ASSETS
-background_image_filename = 'assets/BG.jpg'
-mouse_image_filename = 'assets/test.jpg'
-bullet_image_filename = 'assets/bullet_blue.png'
-
 import pygame
 from colors import *
 from pygame.locals import *
@@ -14,9 +9,9 @@ from classes import CBaseSprite as sprite_base
 pygame.init()
 
 #IMAGES
-background = pygame.image.load(background_image_filename)
-mouse_cursor = pygame.image.load(mouse_image_filename)
-bullet = pygame.image.load(bullet_image_filename)
+background = pygame.image.load('assets/BG.jpg')
+mouse_cursor = pygame.image.load('assets/test.jpg')
+bullet = pygame.image.load('assets/bullet_blue.png')
 
 #SHAPES
 shape_rect = pygame.rect.Rect(10,20,200,300)
@@ -62,7 +57,6 @@ while (running):
 
     clock.tick(frames_per_second)                       #control updating to 60 fps
     pygame.display.update();
-    #DRAW--------------------------------------------------------------------------------
 
 #deactivate pygame lib
 pygame.quit()
