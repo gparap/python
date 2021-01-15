@@ -2,7 +2,7 @@
 background_image_filename = 'assets/BG.jpg'
 mouse_image_filename = 'assets/test.jpg'
 car_red_image_path = 'assets/car_red.png'
-car_blue_image_path = 'assets/car_red.png'  #82 x 123
+car_blue_image_path = 'assets/car_red.png'
 
 import pygame
 from colors import *
@@ -21,7 +21,7 @@ if (__name__ == "__main__"):
     car_blue = pygame.image.load(car_blue_image_path)
 
     #SHAPES
-    shape_rect = pygame.rect.Rect(10,20,200,300)
+    shape_rect = pygame.rect.Rect(10, 20, 200, 300)
 
     #DISPLAY
     window_size = window_width, window_height = 640, 480
@@ -39,8 +39,8 @@ if (__name__ == "__main__"):
     #CAR
     def car(x, y):
         window_screen.blit(car_red, (x, y))
-    car_width = 82
-    car_height = 123
+    car_width = 96
+    car_height = 128
     x = window_width / 2 - car_width / 2
     y = window_height - car_height
     x_velocity = 0
@@ -66,9 +66,6 @@ if (__name__ == "__main__"):
                 if (event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT):
                     x_velocity = 0
 
-        #------------------------------------------------------------------------------------
-        #DRAW
-        #------------------------------------------------------------------------------------
         #clear the screen to silver
         window_screen.fill(silver)
         
@@ -91,9 +88,6 @@ if (__name__ == "__main__"):
         #update
         clock.tick(frames_per_second)
         pygame.display.update()
-        #------------------------------------------------------------------------------------
-        #DRAW
-        #------------------------------------------------------------------------------------
 
     #deactivate pygame lib
     pygame.quit()
