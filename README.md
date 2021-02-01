@@ -1,2 +1,2 @@
 # python
-Python Snippets
+Python/Pygame Projects
